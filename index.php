@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google FAQ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
 <?php 
     $arrFaq = [
         [
@@ -109,16 +120,14 @@
         ],
     ];
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google FAQ</title>
-</head>
-<body>
-    
+<div class="container">
+    <?php 
+        foreach ($arrFaq as $FAQ) {
+            $domanda = $FAQ['domanda'];
+            echo "<h2>$domanda</h2>";
+            echo $FAQ['risposta'];
+        };
+    ?>
+</div>
 </body>
 </html>
